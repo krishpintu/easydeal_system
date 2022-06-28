@@ -8,11 +8,21 @@ public class LoginController {
 
     @RequestMapping("/login")
     public String loginPage(){
-        return "auth-login";
+        return "/pages/login";
     }
 
-    @RequestMapping("/home")
-    public String loginSubmit(){
-        return "/pages/landing_page";
+    @RequestMapping("/register")
+    public String registerPage(){
+        return "/pages/signup";
+    }
+
+    @RequestMapping({"/layout"})
+    public String layoutPage(){
+        return "/layouts/_layout";
+    }
+
+    @RequestMapping({"/","/index","/home"})
+    public String homePage(){
+        return "/pages/index";
     }
 }
